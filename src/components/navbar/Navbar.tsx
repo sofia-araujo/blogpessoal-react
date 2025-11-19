@@ -16,12 +16,13 @@ function Navbar() {
     <div className="w-full flex justify-center py-4 bg-1 text-slate-900">
         <div className="container flex justify-between text-lg mx-8">
          <Link to="/home" className="text-2xl font-bold">Blog pessoal</Link> 
+
           <div className='flex gap-4 text-lg font-bold'>
             Postagens
-            Temas
-            Cadastrar Tema
+            <Link to='/temas' className='hover:underline'>Temas</Link>
+            <Link to='/cadastrartema' className='hover:underline'>Cadastrar tema</Link>
             Perfil
-             <Link to='' onClick={logout} className="hover:underline">Sair</Link>
+            <Link to='' onClick={logout} className="hover:underline">Sair</Link>
           </div>
         </div>
     </div>
