@@ -4,12 +4,16 @@
 // #A48AF4
 // #F3D74C
 // #CEF855
+
+import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens"
+import ModalPostagem from "../../components/postagens/modalpostagem/ModalPostagem"
+
 // Fonte: Noto Sans
 function Home() {
 
     return (
-
-        /* Container */
+        <>
+        { /* Container */ }
         <div
             
             className="bg-1 flex justify-center"
@@ -33,9 +37,10 @@ function Home() {
                     <div
                        className="flex justify-around gap-4"
                     >
-                        <div
-                            className="rounded text-slate-900 border-[2px] border-slate-900 font-bold border-solid py-2 px-4 hover:text-white hover:bg-slate-900"
-                        >Nova Postagem</div>
+                        {/* Link/Botão */}
+						<div className="flex justify-around gap-4">
+                            <ModalPostagem />
+                        </div>
                     </div>
                 </div>
 
@@ -51,7 +56,10 @@ function Home() {
                     />
                 </div>
             </div>
+             
         </div>
+        <ListaPostagens />
+        </>
     )
 }
 
